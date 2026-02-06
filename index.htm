@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Language" content="es" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>MENÚ</title>
+
+<style type="text/css">
+.style1 {
+	font-family: "Bahnschrift Condensed";
+	border-style: solid;
+	border-color: #54ADF5;
+	background-color: #CEEFFF;
+	text-align: left;
+}
+.style2 {
+	text-align: center;
+	font-size: 150pt;
+	font-family: "Bahnschrift Condensed";
+	color: #54ADF5;
+	background-color: #CEEFFF;
+	position: relative;
+}
+.style3 {
+	font-size: 30pt;
+	color: #54ADF5;
+}
+.style4 {
+	font-size: 15pt;
+	color: #54ADF5;
+}
+.style6 {
+	text-decoration: none;
+}
+.style7 {
+	color: #54ADF5;
+}
+
+.fechaHora {
+	position: fixed;
+	bottom: 25px;
+	right: 15px;
+	font-size: 14pt;
+	color: #54ADF5;
+	font-family: "Bahnschrift Condensed";
+}
+
+.contadorVisitas {
+	position: absolute;
+	bottom: 15px;
+	left: 20px;
+	font-size: 14pt;
+	color: #54ADF5;
+	font-family: "Bahnschrift Condensed";
+}
+
+/* ===== FORO ===== */
+.foro {
+	position: fixed;
+	top: 20px;
+	right: 15px;
+	width: 260px;
+	background-color: #CEEFFF;
+	border: 2px solid #54ADF5;
+	font-family: "Bahnschrift Condensed";
+	color: #54ADF5;
+	padding: 10px;
+}
+
+.foro h3 {
+	margin: 0 0 8px 0;
+	text-align: center;
+	font-size: 18pt;
+}
+
+.foro textarea {
+	width: 98%;
+	height: 60px;
+	border: 1px solid #54ADF5;
+	font-family: "Bahnschrift Condensed";
+	resize: none;
+}
+
+.foro button {
+	margin-top: 5px;
+	width: 100%;
+	background-color: #54ADF5;
+	color: white;
+	border: none;
+	font-size: 14pt;
+	cursor: pointer;
+}
+
+.foroMensajes {
+	margin-top: 10px;
+	max-height: 200px;
+	overflow-y: auto;
+	border-top: 1px solid #54ADF5;
+	padding-top: 5px;
+}
+
+.mensaje {
+	background-color: white;
+	border: 1px solid #54ADF5;
+	margin-bottom: 5px;
+	padding: 4px;
+	font-size: 12pt;
+}
+
+/* ===== SUBMENÚ PROTOCOLOS (DEBAJO) ===== */
+.submenu {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.submenu-items {
+	display: none;
+	position: relative; /* Cambiado para que aparezca debajo */
+	margin-top: 5px;
+	background-color: #CEEFFF;
+	border: 1px solid #54ADF5;
+	padding: 5px;
+}
+
+.submenu-items a {
+	display: block;
+	padding: 3px 5px;
+	text-decoration: none;
+}
+
+.submenu-items a:hover {
+	background-color: #54ADF5;
+	color: white;
+}
+
+.submenu:hover .submenu-items {
+	display: block;
+}
+</style>
+</head>
+
+<body>
+
+<table style="width: 1590px; height: 750px" align="center">
+	<tr>
+		<td class="style1" style="width: 280px; height: 680px">
+		<table style="width: 300px; height: 320px">
+			<tr>
+				<td style="width: 300px; height: 50px" class="style3">MENÚ</td>
+			</tr>
+			<tr><td class="style4"><a class="style6" href="definicion.htm"><span class="style7">DEFINICIÓN</span></a></td></tr>
+			<tr><td class="style4"><a class="style6" href="historia.htm"><span class="style7">HISTORIA</span></a></td></tr>
+			<tr><td class="style4"><a class="style6" href="tarjeta.htm"><span class="style7">TARJETA DE RED Y MÓD</span></a>EM</td></tr>
+			<tr><td class="style4"><a class="style6" href="tipos_conexiones.htm"><span class="style7">TIPOS DE CONEXIONES</span></a></td></tr>
+			<tr><td class="style4"><a class="style6" href="navegadores.htm"><span class="style7">NAVEGADORES</span></a></td></tr>
+			
+			<!-- SUBMENÚ PROTOCOLOS (DEBAJO) -->
+			<tr>
+				<td class="style4">
+					<div class="submenu">
+						<span class="style7">PROTOCOLOS</span>
+						<div class="submenu-items">
+							<a class="style7 style6" href="protocolo_tcp.htm">Protocolo TCP/IP</a>
+							<a class="style7 style6" href="protocolo_ftp.htm">Protocolo FTP</a>
+						</div>
+					</div>
+				</td>
+			</tr>
+			
+			<tr><td class="style4"><a class="style6" href="pagina_web.htm"><span class="style7">PÁGINAS WEB</span></a></td></tr>
+			<tr><td class="style4"><a class="style6" href="funcionalidades.htm"><span class="style7">FUNCIONALIDADES</span></a></td></tr>
+			<tr><td class="style4"><a class="style6" href="privacidad.htm"><span class="style7">PRIVACIDAD Y SEGURIDAD EN RRSS</span></a></td></tr>
+		</table>
+		</td>
+
+		<td class="style2" style="width: 1000px; height: 680px">
+			INTERNET
+			<div id="contador" class="contadorVisitas"></div>
+		</td>
+	</tr>
+</table>
+
+<div id="fechaHora" class="fechaHora"></div>
+
+<!-- FORO -->
+<div class="foro">
+	<h3>FORO</h3>
+	<textarea id="textoMensaje" placeholder="Escribe tu mensaje..."></textarea>
+	<button onclick="enviarMensaje()">Enviar</button>
+	<div id="foroMensajes" class="foroMensajes"></div>
+</div>
+
+<script type="text/javascript">
+	function actualizarFechaHora() {
+		var ahora = new Date();
+		var dia = ("0" + ahora.getDate()).slice(-2);
+		var mes = ("0" + (ahora.getMonth() + 1)).slice(-2);
+		var anio = ahora.getFullYear();
+		var horas = ("0" + ahora.getHours()).slice(-2);
+		var minutos = ("0" + ahora.getMinutes()).slice(-2);
+		var segundos = ("0" + ahora.getSeconds()).slice(-2);
+
+		document.getElementById("fechaHora").innerHTML =
+			dia + "/" + mes + "/" + anio + " " +
+			horas + ":" + minutos + ":" + segundos;
+	}
+
+	setInterval(actualizarFechaHora, 1000);
+	actualizarFechaHora();
+
+	/* CONTADOR DE VISITAS */
+	if (localStorage.getItem("contadorVisitas") === null) {
+		localStorage.setItem("contadorVisitas", 0);
+	}
+	var visitas = parseInt(localStorage.getItem("contadorVisitas")) + 1;
+	localStorage.setItem("contadorVisitas", visitas);
+
+	document.getElementById("contador").innerHTML =
+		"Visitas: " + ("00000" + visitas).slice(-5);
+
+	/* ===== FORO ===== */
+	function cargarMensajes() {
+		var mensajes = localStorage.getItem("foroMensajes");
+		if (mensajes) {
+			document.getElementById("foroMensajes").innerHTML = mensajes;
+		}
+	}
+
+	function enviarMensaje() {
+		var texto = document.getElementById("textoMensaje").value;
+		if (texto === "") return;
+
+		var contenedor = document.getElementById("foroMensajes");
+		var div = document.createElement("div");
+		div.className = "mensaje";
+		div.textContent = texto; // más seguro que innerHTML
+
+		contenedor.appendChild(div);
+		localStorage.setItem("foroMensajes", contenedor.innerHTML);
+		document.getElementById("textoMensaje").value = "";
+	}
+
+	cargarMensajes();
+</script>
+
+</body>
+</html>

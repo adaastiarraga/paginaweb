@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Language" content="es" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>MENÚ</title>
+
+<style type="text/css">
+.style1 {
+	font-family: "Bahnschrift Condensed";
+	border-style: solid;
+	border-color: #54ADF5;
+	background-color: #CEEFFF;
+	text-align: left;
+}
+.style2 {
+	text-align: left;
+	font-size: 150pt;
+	font-family: "Bahnschrift Condensed";
+	color: #54ADF5;
+	background-color: #CEEFFF;
+}
+.style3 {
+	font-size: 30pt;
+	color: #54ADF5;
+}
+.style4 {
+	font-size: 15pt;
+	color: #54ADF5;
+}
+.style5 { text-decoration: none; }
+.style6 { color: #54ADF5; }
+.style7 { text-align: left; }
+.style8 {
+	text-align: center;
+	font-size: 100pt;
+}
+.style9 { font-size: 30pt; }
+
+/* ===== SLIDER ===== */
+.slider {
+	width: 700px;
+	height: 350px;
+	margin: 30px auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.slider img {
+	width: 700px;
+	height: 350px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.slider img.active {
+	display: block;
+}
+
+/* ===== FLECHAS ===== */
+.arrow {
+	position: absolute;
+	top: 150px;
+	font-size: 40pt;
+	color: #54ADF5;
+	background-color: #CEEFFF;
+	padding: 5px 15px;
+	text-decoration: none;
+	z-index: 10;
+}
+
+.arrow.left { left: 10px; }
+.arrow.right { right: 10px; }
+</style>
+</head>
+
+<body>
+
+<table style="width: 1590px; height: 750px" align="center">
+<tr>
+<td class="style1" style="width: 280px; height: 640px">
+<table style="width: 300px; height: 320px">
+<tr>
+<td class="style3"><a href="index.htm" class="style5"><span class="style6">MENÚ</span></a></td>
+</tr>
+<tr><td class="style4"><a href="definicion.htm" class="style5"><span class="style6">DEFINICIÓN</span></a></td></tr>
+<tr><td class="style4"><a href="historia.htm" class="style5"><span class="style6">HISTORIA</span></a></td></tr>
+<tr><td class="style4"><a href="tarjeta.htm" class="style5"><span class="style6">TARJETA DE RED Y MÓDEM</span></a></td></tr>
+<tr><td class="style4"><a href="tipos_conexiones.htm" class="style5"><span class="style6">TIPOS DE CONEXIONES</span></a></td></tr>
+<tr><td class="style4"><span class="style6">NAVEGADORES</span></td></tr>
+<tr><td class="style4"><a href="protocolo.htm" class="style5"><span class="style6">PROTOCOLO TCP/IP Y FTP</span></a></td></tr>
+<tr><td class="style4"><a href="pagina_web.htm" class="style5"><span class="style6">PÁGINAS WEB</span></a></td></tr>
+<tr><td class="style4"><a href="funcionalidades.htm" class="style5"><span class="style6">FUNCIONALIDADES</span></a></td></tr>
+<tr><td class="style4"><a href="privacidad.htm" class="style5"><span class="style6">PRIVACIDAD Y SEGURIDAD EN RRSS</span></a></td></tr>
+</table>
+</td>
+
+<td class="style2" style="width: 1000px" valign="top">
+<table style="width: 100%; height: 680px">
+<tbody class="style7">
+<tr>
+<td class="style8" style="height: 200px">NAVEGADORES</td>
+</tr>
+
+<tr>
+<td class="style9" valign="top">
+<ul>
+<li><a href="navegadores_concepto.htm" class="style5"><span class="style6">CONCEPTO</span></a></li>
+<li><a href="navegadores_historia.htm" class="style5"><span class="style6">HISTORIA DE LOS NAVEGADORES</span></a></li>
+<li><a href="navegadores_funcionamiento.htm" class="style5"><span class="style6">FUNCIONAMIENTO Y TIPOS</span></a></li>
+</ul>
+
+<!-- ===== SLIDER ===== -->
+<div class="slider" id="slider">
+	<a href="javascript:void(0)" class="arrow left" onclick="prevSlide()">&#10094;</a>
+	<a href="javascript:void(0)" class="arrow right" onclick="nextSlide()">&#10095;</a>
+
+	<img src="google_imagen.png" class="active" alt="Google Chrome" />
+	<img src="safari_imagen.jpg" alt="Safari" />
+	<img src="mosaic_imagen.jpg" alt="Mosaic" />
+</div>
+
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</table>
+
+<script type="text/javascript">
+var current = 0;
+var slider = document.getElementById("slider");
+var images = slider.getElementsByTagName("img");
+
+function showSlide(n) {
+	for (var i = 0; i < images.length; i++) {
+		images[i].className = "";
+	}
+	images[n].className = "active";
+}
+
+function nextSlide() {
+	current++;
+	if (current >= images.length) current = 0;
+	showSlide(current);
+}
+
+function prevSlide() {
+	current--;
+	if (current < 0) current = images.length - 1;
+	showSlide(current);
+}
+</script>
+
+</body>
+</html>
